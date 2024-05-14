@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="styleSheet" href="./assets/css/styleSheetBMI.css" />
+      </head>
+      <body>
+        <h1>BMI Calculator</h1>
+        <div class="container">
+          <div class="container left-side">
+            <div class="container left-side outside-button">
+              <button type="button"><p>US Units</p></button>
+              <button type="button"><p>Metric Units</p></button>
+              <button type="button"><p>Other Units</p></button>
+            </div>
+            <div class="container left-side age">
+                <span>Age</span>
+                <input type="text" name="age" value="" required="Required Field" onkeyup="onlyNumber(this)" id="age">
+                <p>ages: 2 - 120</p>
+            </div>
+            <div class="container left-side gender">
+                <p>Gender</p>
+                <p><input type="radio" name="gender" value=""  onkeyup="onlyNumber(this)">Male</p>
+                <p><input type="radio" name="gender" value=""  onkeyup="onlyNumber(this)">Female</p>
+            </div>
+            <div class="container left-side height">
+                <p>Height</p>
+                <input type="text" name="height" value="" placeholder="feet"  onkeyup="onlyNumber(this)" id="h-feet">
+                <input type="text" name="height" value="" placeholder="inches" onkeyup="onlyNumber(this)" id="h-inches">
+            </div>
+            <div class="container left-side weight">
+                <p>Weight</p>
+                <input type="text" name="weight" value="" placeholder="pounds"  onkeyup="onlyNumber(this)" id="weight">
+            </div>
+            <div class="bottom-side">
+                <input type="submit" name="cal" value="Calculate" class="bottom-side-cal" onclick="calculateBMI()">
+                <input type="submit" name="clear" value="Clear" class="bottom-side-clear" onclick="clearData()">
+            </div>
+          </div>
+          <div class="container right-side">
+            <div class="container right-side result">
+                <h2>Result</h2>
+            </div>
+            <div class="container right-side show-result">
+                <h2 id="cal"></h2>
+            </div>
+            <div class="container right-side show-details">
+                <p id="details"></p>
+            </div>
+          </div>
+        </div>
+      </body>
+</html>
